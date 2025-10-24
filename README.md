@@ -2,10 +2,27 @@
 
 # TODO List
 
-- [ ] 프로젝트 세팅 및 README.md 정리
-- [ ] 각종 컨벤션 및 요구사항 정리
+- [x] 프로젝트 세팅 및 README.md 정리
+- [x] 각종 컨벤션 및 요구사항 정리
 - [ ] 기본 테스트 요구사항 및 `camp.nextstep.edu.missionutils.Randoms` 확인해보기
-
+- [ ] 도메인 기능 구현
+    - [ ] VO 구현
+        - [ ] CarName
+            - [ ] CarNameTest 작성
+            - [ ] CarName 구현
+        - [ ] Coordinate
+            - [ ] CoordinateTest 작성
+            - [ ] Coordinate 구현
+    - [ ] Entity 구현
+        - [ ] Car
+            - [ ] CarTest 작성
+            - [ ] Car 구현
+    - [ ] 도메인 서비스 구현
+        - [ ] MoveStrategy
+            - [ ] MoveStrategy 인터페이스 작성
+            - [ ] RandomMoveStrategy
+                - [ ] RandomMoveStrategyTest 작성
+                - [ ] RandomMoveStrategy 구현
 
 ---
 
@@ -25,27 +42,29 @@ screenshot
 ## 프로그래밍 요구 사항 2
 
 - [ ] indent(인덴트, 들여쓰기) depth를 3이 넘지 않도록 구현한다. 2까지만 허용한다.
-  - 예를 들어 while문 안에 if문이 있으면 들여쓰기는 2이다.
-  - 힌트: indent(인덴트, 들여쓰기) depth를 줄이는 좋은 방법은 함수(또는 메서드)를 분리하면 된다.
+    - 예를 들어 while문 안에 if문이 있으면 들여쓰기는 2이다.
+    - 힌트: indent(인덴트, 들여쓰기) depth를 줄이는 좋은 방법은 함수(또는 메서드)를 분리하면 된다.
 - [ ] 3항 연산자를 쓰지 않는다.
 - [ ] 함수(또는 메서드)가 한 가지 일만 하도록 최대한 작게 만들어라.
 - [ ] JUnit 5와 AssertJ를 이용하여 정리한 기능 목록이 정상적으로 작동하는지 테스트 코드로 확인한다.
-  - 테스트 도구 사용법이 익숙하지 않다면 아래 문서를 참고하여 학습한 후 테스트를 구현한다.
-    - [JUnit 5 User Guide](https://docs.junit.org/current/user-guide/)
-    - [AssertJ User Guide](https://assertj.github.io/doc/)
-    - [AssertJ Exception Assertions](https://www.baeldung.com/assertj-exception-assertion)
-    - [Guide to JUnit 5 Parameterized Tests](https://www.baeldung.com/parameterized-tests-junit-5)
+    - 테스트 도구 사용법이 익숙하지 않다면 아래 문서를 참고하여 학습한 후 테스트를 구현한다.
+        - [JUnit 5 User Guide](https://docs.junit.org/current/user-guide/)
+        - [AssertJ User Guide](https://assertj.github.io/doc/)
+        - [AssertJ Exception Assertions](https://www.baeldung.com/assertj-exception-assertion)
+        - [Guide to JUnit 5 Parameterized Tests](https://www.baeldung.com/parameterized-tests-junit-5)
 
 ## 라이브러리
 
 - [ ] `camp.nextstep.edu.missionutils` 에서 제공하는 `Randoms` 및 `Console` API를 사용하여 구현해야 한다.
-  - [ ] Random 값 추출은 `camp.nextstep.edu.missionutils.Randoms`의 `pickNumberInRange()`를 활용한다.
-  - [ ] 사용자가 입력하는 값은 `camp.nextstep.edu.missionutils.Console`의 `readLine()`을 활용한다.
+    - [ ] Random 값 추출은 `camp.nextstep.edu.missionutils.Randoms`의 `pickNumberInRange()`를 활용한다.
+    - [ ] 사용자가 입력하는 값은 `camp.nextstep.edu.missionutils.Console`의 `readLine()`을 활용한다.
 
 ### 사용 예시
+
 - 0에서 9까지의 정수 중 한 개의 정수 반환
+
 ```java
-Randoms.pickNumberInRange(0, 9);
+Randoms.pickNumberInRange(0,9);
 ```
 
 ## 과제 진행 요구 사항
