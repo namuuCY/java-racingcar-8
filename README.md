@@ -1,5 +1,8 @@
 # java-racingcar-precourse
 
+- Application Service : use case 기반 서비스 - 비즈니스 로직 없음
+- Domain Service : 비즈니스 로직 존재, Stateless
+
 # TODO List
 
 - [x] 프로젝트 세팅 및 README.md 정리
@@ -13,13 +16,13 @@
         - [x] Coordinate
             - [x] CoordinateTest 작성
             - [x] Coordinate 구현
-    - [ ] Entity 구현
-        - [ ] Car
-            - [ ] CarTest 작성
-            - [ ] Car 구현
+    - [x] Entity 구현
+        - [x] Car
+            - [x] CarTest 작성
+            - [x] Car 구현
     - [ ] 도메인 서비스 구현
         - [ ] MoveStrategy
-            - [ ] MoveStrategy 인터페이스 작성
+            - [x] MoveStrategy 인터페이스 작성
             - [ ] RandomMoveStrategy
                 - [ ] RandomMoveStrategyTest 작성
                 - [ ] RandomMoveStrategy 구현

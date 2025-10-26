@@ -89,10 +89,10 @@ public class CarName {
     }
 
     /**
-     * 이름의 길이 체크를 진행합니다.
+     * 이름의 문자 체크를 진행합니다. 영어만 가능하고, 이외의 언어는 불가능 합니다.
      *
      * @param name
-     * @throws CustomException UPPER_SIZE_LIMIT 보다 클 경우 throw
+     * @throws CustomException 영어(대문자, 소문자) 이외의 이름을 입력 시 throw
      */
     private void checkValidContent(String name) {
         if (name.matches(ALLOWED_CHAR_REGEX)) {
