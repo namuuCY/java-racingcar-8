@@ -19,7 +19,6 @@ public class CarNameTest {
     @CsvSource({
             "test, true",
             "asdf, false"
-
     })
     void 동등성_테스트(String input, Boolean expected) {
         // given
@@ -30,7 +29,6 @@ public class CarNameTest {
         // then
         assertThat(isEqual).isEqualTo(expected);
     }
-
 
     @ParameterizedTest
     @EmptySource
@@ -69,6 +67,7 @@ public class CarNameTest {
             "우테코",
             "as1df",
             "@1a!",
+            "a b"
     })
     void 영문_외_문자_테스트(String input) {
         assertSimpleTest(() ->
