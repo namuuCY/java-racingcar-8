@@ -42,7 +42,7 @@ public class Car implements Comparable<Car> {
     }
 
     public void move(MoveStrategy strategy) {
-        int increment = strategy.moveByStrategy();
+        Integer increment = strategy.moveByStrategy();
 
         this.coordinate = coordinate.moveForward(increment);
     }

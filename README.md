@@ -20,12 +20,21 @@
         - [x] Car
             - [x] CarTest 작성
             - [x] Car 구현
+        - [ ] Cars
+            - [ ] CarsTest 작성
+            - [ ] Cars 구현
     - [ ] 도메인 서비스 구현
-        - [ ] MoveStrategy
+        - [x] MoveStrategy
             - [x] MoveStrategy 인터페이스 작성
-            - [ ] RandomMoveStrategy
-                - [ ] RandomMoveStrategyTest 작성
-                - [ ] RandomMoveStrategy 구현
+            - [x] RandomMoveStrategy
+                - [x] RandomMoveStrategyTest 작성
+                - [x] RandomMoveStrategy 구현
+                - [x] RandomNumberGeneratorTest 작성
+                - [x] RandomNumberGenerator 구현
+    - [ ] 어플리케이션 서비스 구현
+        - [ ] RacingCarService
+            - [ ] RacingCarService 구현
+    -
 
 ---
 
