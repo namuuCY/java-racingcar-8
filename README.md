@@ -4,15 +4,15 @@
 
 - [x] 프로젝트 세팅 및 README.md 정리
 - [x] 각종 컨벤션 및 요구사항 정리
-- [ ] 기본 테스트 요구사항 및 `camp.nextstep.edu.missionutils.Randoms` 확인해보기
+- [x] 기본 테스트 요구사항 및 `camp.nextstep.edu.missionutils.Randoms` 확인해보기
 - [ ] 도메인 기능 구현
-    - [ ] VO 구현
-        - [ ] CarName
-            - [ ] CarNameTest 작성
-            - [ ] CarName 구현
-        - [ ] Coordinate
-            - [ ] CoordinateTest 작성
-            - [ ] Coordinate 구현
+    - [x] VO 구현
+        - [x] CarName
+            - [x] CarNameTest 작성
+            - [x] CarName 구현
+        - [x] Coordinate
+            - [x] CoordinateTest 작성
+            - [x] Coordinate 구현
     - [ ] Entity 구현
         - [ ] Car
             - [ ] CarTest 작성
