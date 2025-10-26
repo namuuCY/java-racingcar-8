@@ -13,6 +13,21 @@ import racingcar.domain.service.MoveStrategy;
 
 public class CarTest {
 
+    class MockMoveStrategy implements MoveStrategy {
+
+        private final Integer increment;
+
+        public MockMoveStrategy(Integer increment) {
+            this.increment = increment;
+        }
+
+        // 테스트를 위해 random 이 아닌, 직접적으로 증가시킵니다.
+        @Override
+        public Integer moveByStrategy() {
+            return increment;
+        }
+    }
+
     // 생성자
     @ParameterizedTest
     @ValueSource(
@@ -57,16 +72,8 @@ public class CarTest {
         Car car = Car.of("test", prev);
 
         // 테스트를 위한 MoveStrategy 익명 클래스를 생성
-        class MockMoveStrategy implements MoveStrategy {
 
-            // 테스트를 위해 random 이 아닌, 직접적으로 증가시킵니다.
-            @Override
-            public int moveByStrategy() {
-                return increment;
-            }
-        }
-
-        car.move(new MockMoveStrategy());
+        car.move(new MockMoveStrategy(increment));
         Coordinate nextCoordinate = car.getCoordinate();
 
         assertThat(nextCoordinate.getCoordinate()).isEqualTo(expected);
