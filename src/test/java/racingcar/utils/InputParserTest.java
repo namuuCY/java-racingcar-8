@@ -17,7 +17,7 @@ public class InputParserTest {
     void 이름_입력값_유효성_테스트(String input) {
         assertSimpleTest(() ->
                 assertThatThrownBy(() -> {
-
+                    InputParser.namesParser(input);
                 })
                         .isInstanceOf(IllegalArgumentException.class)
         );
@@ -32,7 +32,7 @@ public class InputParserTest {
     void 회차_입력값_유효성_테스트(String input) {
         assertSimpleTest(() ->
                 assertThatThrownBy(() -> {
-
+                    InputParser.trialParser(input);
                 })
                         .isInstanceOf(IllegalArgumentException.class)
         );
