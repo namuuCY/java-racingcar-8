@@ -3,7 +3,6 @@ package racingcar.domain.entity;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
-import racingcar.domain.VO.CarName;
 import racingcar.domain.VO.Coordinate;
 import racingcar.domain.service.MoveStrategy;
 import racingcar.exception.CustomException;
@@ -21,7 +20,6 @@ public class CarList {
     }
 
     public static CarList from(List<String> inputNames, Integer trial) {
-
         List<Car> cars = inputNames.stream()
                 .map(Car::initFrom)
                 .toList();
@@ -30,6 +28,10 @@ public class CarList {
                 cars,
                 trial
         );
+    }
+
+    public List<Car> currentCarStatus() {
+        return cars;
     }
 
     private void validateArguments(List<Car> cars, Integer trial) {
@@ -43,8 +45,7 @@ public class CarList {
         validateCarSize(originalSize);
 
         Set<String> names = cars.stream()
-                .map(Car::getCarName)
-                .map(CarName::getName)
+                .map(Car::getOriginalName)
                 .collect(Collectors.toSet());
 
         if (originalSize == names.size()) {

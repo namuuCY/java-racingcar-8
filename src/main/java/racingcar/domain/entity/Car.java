@@ -21,8 +21,8 @@ public class Car implements Comparable<Car> {
         );
     }
 
-    public CarName getCarName() {
-        return carName;
+    public String getOriginalName() {
+        return carName.getName();
     }
 
     public Coordinate getCoordinate() {
