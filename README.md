@@ -2,6 +2,7 @@
 
 - Application Service : use case 기반 서비스 - 비즈니스 로직 없음
 - Domain Service : 비즈니스 로직 존재, Stateless
+- 이번주 어려웠던 부분 : 테스트만을 위한 객체
 
 # TODO List
 
@@ -20,10 +21,7 @@
         - [x] Car
             - [x] CarTest 작성
             - [x] Car 구현
-        - [ ] Cars
-            - [ ] CarsTest 작성
-            - [ ] Cars 구현
-    - [ ] 도메인 서비스 구현
+    - [x] 도메인 서비스 구현
         - [x] MoveStrategy
             - [x] MoveStrategy 인터페이스 작성
             - [x] RandomMoveStrategy
@@ -31,6 +29,10 @@
                 - [x] RandomMoveStrategy 구현
                 - [x] RandomNumberGeneratorTest 작성
                 - [x] RandomNumberGenerator 구현
+    - [ ] aggregate 구현
+        - [ ] CarList
+            - [ ] CarListTest 작성
+            - [ ] CarList 구현
     - [ ] 어플리케이션 서비스 구현
         - [ ] RacingCarService
             - [ ] RacingCarService 구현
