@@ -40,9 +40,43 @@
     - [x] controller 구현
     - [x] AppConfig 구현
 
+디렉토리 구조
 ---
 
-screenshot
+```
+└── racingcar
+    ├── Application.java
+    ├── config
+    │   └── AppConfig.java
+    ├── controller
+    │   ├── RacingCarController.java
+    │   └── dto
+    │       └── ResponseDto.java
+    ├── domain
+    │   ├── VO
+    │   │   ├── CarName.java
+    │   │   └── Coordinate.java
+    │   ├── entity
+    │   │   ├── Car.java
+    │   │   └── CarList.java
+    │   └── service
+    │       ├── MoveStrategy.java
+    │       ├── NumberGenerator.java
+    │       ├── RandomMoveStrategy.java
+    │       └── RandomNumberGenerator.java
+    ├── exception
+    │   ├── CustomException.java
+    │   └── ExceptionCode.java
+    ├── service
+    │   └── RacingCarService.java
+    ├── utils
+    │   └── InputParser.java
+    └── view
+        ├── AnnouncementMessage.java
+        ├── InputView.java
+        └── OutputView.java
+
+```
 
 ---
 
