@@ -21,13 +21,6 @@ public class Car implements Comparable<Car> {
         );
     }
 
-    public static Car of(String name, Integer coordinate) {
-        return new Car(
-                new CarName(name),
-                new Coordinate(coordinate)
-        );
-    }
-
     public CarName getCarName() {
         return carName;
     }

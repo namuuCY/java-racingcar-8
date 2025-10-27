@@ -39,11 +39,16 @@ public class CarTest {
             "10, 4, true",
     })
     void 대소_비교_테스트(int a, int b, boolean expected) {
-        Car carA = Car.of("testA", a);
-        Car carB = Car.of("testB", b);
+        // given
+        Car carA = Car.initFrom("testA");
+        Car carB = Car.initFrom("testB");
 
+        // when
+        carA.move(new MockMoveStrategy(a));
+        carB.move(new MockMoveStrategy(b));
         boolean isBigger = carA.compareTo(carB) > 0;
 
+        // then
         assertThat(isBigger).isEqualTo(expected);
     }
 
@@ -54,10 +59,9 @@ public class CarTest {
             "10, 5, 15"
     })
     void 이동_테스트(int prev, int increment, int expected) {
-        Car car = Car.of("test", prev);
+        Car car = Car.initFrom("test");
 
-        // 테스트를 위한 MoveStrategy 익명 클래스를 생성
-
+        car.move(new MockMoveStrategy(prev));
         car.move(new MockMoveStrategy(increment));
         Coordinate nextCoordinate = car.getCoordinate();
 
