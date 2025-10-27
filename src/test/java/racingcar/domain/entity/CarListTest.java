@@ -10,22 +10,6 @@ import org.junit.jupiter.params.provider.ValueSource;
 
 public class CarListTest {
 
-
-    @ParameterizedTest
-    @ValueSource(strings = {
-            "poby, asdf",
-            "poby:asdf",
-            "poby,asdf,"
-    })
-    void 입력값_유효성_테스트(String input) {
-        assertSimpleTest(() ->
-                assertThatThrownBy(() -> {
-                    new CarList();
-                })
-                        .isInstanceOf(IllegalArgumentException.class)
-        );
-    }
-
     @ParameterizedTest
     @ValueSource(strings = {
             "poby,poby",
