@@ -98,7 +98,7 @@ public class CarName {
         if (name.matches(ALLOWED_CHAR_REGEX)) {
             return;
         }
-        throw new CustomException(ExceptionCode.INVALID_INPUT_NAME_LENGTH);
+        throw new CustomException(ExceptionCode.NOT_ALLOWED_NAME);
     }
 
 }

@@ -34,7 +34,7 @@ public class RacingCarController {
     }
 
     private Integer scanAndParseTrials() {
-        String trialInput = inputView.scanNames();
+        String trialInput = inputView.scanTrial();
         return InputParser.trialParser(trialInput);
     }
 }

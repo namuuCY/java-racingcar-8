@@ -8,23 +8,24 @@ import racingcar.domain.service.MoveStrategy;
 import racingcar.exception.CustomException;
 import racingcar.exception.ExceptionCode;
 
-public class CarList {
+public class Entry {
 
     private final List<Car> cars;
     private final Integer trial;
+    private final Integer MAX_TRIAL = 1000;
 
-    private CarList(List<Car> cars, Integer trial) {
+    private Entry(List<Car> cars, Integer trial) {
         validateArguments(cars, trial);
         this.cars = cars;
         this.trial = trial;
     }
 
-    public static CarList from(List<String> inputNames, Integer trial) {
+    public static Entry from(List<String> inputNames, Integer trial) {
         List<Car> cars = inputNames.stream()
                 .map(Car::initFrom)
                 .toList();
 
-        return new CarList(
+        return new Entry(
                 cars,
                 trial
         );
@@ -63,7 +64,7 @@ public class CarList {
     }
 
     private void validateTrial(Integer trial) {
-        if (trial > 0 && trial < 1000) {
+        if (trial > 0 && trial < MAX_TRIAL) {
             return;
         }
         throw new CustomException(ExceptionCode.INVALID_TRIAL_NUMBER);

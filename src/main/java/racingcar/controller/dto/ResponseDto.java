@@ -12,14 +12,14 @@ public record ResponseDto(
 ) {
 
     public static ResponseDto of(List<String> names) {
-        LinkedHashMap<String, List<Integer>> map = new LinkedHashMap<>();
+        LinkedHashMap<String, List<Integer>> historyDetail = new LinkedHashMap<>();
 
         for (String name : names) {
-            map.put(name, new ArrayList<>());
+            historyDetail.put(name, new ArrayList<>());
         }
 
         return new ResponseDto(
-                map,
+                historyDetail,
                 new ArrayList<>()
         );
     }
@@ -34,16 +34,16 @@ public record ResponseDto(
     }
 
     private void updateHistoryOfName(String name, Coordinate coordinate) {
-        List<Integer> coordinateList = history.get(name);
-        coordinateList.add(coordinate.getCoordinate());
+        List<Integer> coordinates = history.get(name);
+        coordinates.add(coordinate.getCoordinate());
     }
 
-    public void updateWinner(List<Car> winnerCarList) {
-        List<String> nameList = winnerCarList.stream()
+    public void updateWinner(List<Car> winners) {
+        List<String> nameList = winners.stream()
                 .map(Car::getOriginalName)
                 .toList();
 
-        winners.addAll(nameList);
+        this.winners.addAll(nameList);
     }
 
 }

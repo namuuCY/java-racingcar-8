@@ -14,13 +14,13 @@ import racingcar.domain.VO.Coordinate;
 import racingcar.domain.service.MoveStrategy;
 
 
-public class CarListTest {
+public class EntryTest {
 
     @Test
     void 입력값_중복_이름_테스트() {
         assertSimpleTest(() ->
                 assertThatThrownBy(() -> {
-                    CarList.from(
+                    Entry.from(
                             Arrays.asList("asdf", "asdf"),
                             1
                     );
@@ -34,7 +34,7 @@ public class CarListTest {
     void 단일_이름_예외_체크() {
         assertSimpleTest(() ->
                 assertThatThrownBy(() -> {
-                    CarList.from(Arrays.asList("asdf"), 3);
+                    Entry.from(Arrays.asList("asdf"), 3);
                 })
                         .isInstanceOf(IllegalArgumentException.class)
         );
@@ -46,7 +46,7 @@ public class CarListTest {
     void 횟수_유효성_테스트(Integer trial) {
         assertSimpleTest(() ->
                 assertThatThrownBy(() -> {
-                    CarList.from(
+                    Entry.from(
                             Arrays.asList("asdf", "qwer"),
                             trial
                     );
@@ -63,7 +63,7 @@ public class CarListTest {
     })
     void 이동_테스트(Integer expected, Integer first, Integer second) {
         // given
-        CarList cars = CarList.from(Arrays.asList("asdf", "qwer"), 100);
+        Entry cars = Entry.from(Arrays.asList("asdf", "qwer"), 100);
         MoveStrategy stub = new StupMoveStrategy(first, first, second, second);
 
         // when
@@ -83,7 +83,7 @@ public class CarListTest {
             "toby, poby, 3, 3, 2",
     })
     void 우승자_테스트(String p1, String p2, Integer d1, Integer d2, Integer expected) {
-        CarList cars = CarList.from(Arrays.asList(p1, p2), 2);
+        Entry cars = Entry.from(Arrays.asList(p1, p2), 2);
         MoveStrategy stub = new StupMoveStrategy(d1, d2);
         cars.moveAll(stub);
 
